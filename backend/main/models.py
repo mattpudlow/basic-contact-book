@@ -1,4 +1,6 @@
-from config import db
+import config
+
+db = config.Main.db
 
 class Contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -14,7 +16,3 @@ class Contact(db.Model):
             'email': self.email
         }
     
-    
-
-
-

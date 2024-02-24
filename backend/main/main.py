@@ -1,7 +1,9 @@
 from flask import request, jsonify
-from config import app, db
+import config
 from models import Contact
 
+app = config.Main.app
+db = config.Main.db
 
 @app.route('/contacts', methods=['GET'])
 def get_contacts():
